@@ -98,13 +98,6 @@ def keptnInit(Map args) {
     String stage = args.containsKey("stage") ? args.stage : ""
     String service = args.containsKey("service") ? args.service : ""
     String monitoring = args.containsKey("monitoring") ? args.monitoring : ""
-    
-    echo "### Project: ${project}"
-    echo "### Stage: ${stage}"
-    echo "### Service: ${service}"
-    echo "### keptn endpoint: ${keptn_endpoint}"
-    echo "### keptn bridge: ${keptn_bridge}"
-    echo "### keptn api token: ${keptn_api_token}"
 
     if ((project == "") || (stage == "") || (service == "") ||
         (keptn_endpoint == null) || (keptn_bridge == null) || (keptn_api_token == null)) {
