@@ -103,7 +103,7 @@ def keptnInit(Map args) {
     echo "### Stage: ${stage}"
     echo "### Service: ${service}"
     echo "### keptn endpoint: ${keptn_endpoint}"
-    echo "### keptn bridge: ${keptn_brdige}"
+    echo "### keptn bridge: ${keptn_bridge}"
     echo "### keptn api token: ${keptn_api_token}"
 
     if ((project == "") || (stage == "") || (service == "") ||
