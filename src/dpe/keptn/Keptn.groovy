@@ -1,4 +1,4 @@
-package sh.keptn
+package dpe.keptn
 
 import org.jenkinsci.plugins.plaincredentials.StringCredentials
 import com.cloudbees.plugins.credentials.CredentialsProvider
@@ -1098,5 +1098,12 @@ def sendConfigurationTriggeredEvent(Map args) {
     return keptnContext
 }
 
+def testMe() {
+    def keptnProjectName = "test-jenkins-project"
+    def keptnServiceName = "test-jenkins-service"
+    def keptnStageName = "qualitygates"
+    keptnInit(project: keptnProjectName, service: keptnServiceName, stage: keptnStageName)
+    steps.echo "====== self testing keptnInit steps complete  ======="
+}
 
 return this
