@@ -96,7 +96,8 @@ def keptnLoadFromInit(Map args) {
 def keptnInit(Map args) {
     String keptn_endpoint = args.containsKey("keptn_endpoint") ? args.keptn_endpoint : env.KEPTN_ENDPOINT
     String keptn_bridge = args.containsKey("keptn_bridge") ? args.keptn_bridge : env.KEPTN_BRIDGE
-    String keptn_api_token = keptnApiToken
+    //String keptn_api_token = keptnApiToken
+    String keptn_api_token = args.containsKey("keptn_api_token") ? args.keptn_api_token : env.KEPTN_API_TOKEN
 
     String project = args.containsKey("project") ? args.project : ""
     String stage = args.containsKey("stage") ? args.stage : ""
@@ -1122,11 +1123,11 @@ def testMe() {
     def keptnProjectName = "test-jenkins-project"
     def keptnServiceName = "test-jenkins-service"
     def keptnStageName = "qualitygates"
-    def KEPTN_API_TOKEN = credentials('keptn-api-token')
+    def keptnApiTokenTest = credentials('keptn-api-token')
     echo "keptn api token ${KEPTN_API_TOKEN}"
     def keptnBridgeTest = "http://keptn.35.223.58.148.nip.io/bridge"
     def keptnEndpointTest = "http://keptn.35.223.58.148.nip.io/api"
-    keptnInit project: keptnProjectName, service: keptnServiceName, stage: keptnStageName, keptn_endpoint: keptnEndpointTest, keptn_bridge: keptnBridgeTest
+    keptnInit project: keptnProjectName, service: keptnServiceName, stage: keptnStageName, keptn_endpoint: keptnEndpointTest, keptn_api_token: keptnApiTokenTest, keptn_bridge: keptnBridgeTest
     steps.echo "====== self testing keptnInit steps complete  ======="
 }
 
