@@ -1,8 +1,10 @@
 package dpe.keptn
 
+/**
 import org.jenkinsci.plugins.plaincredentials.StringCredentials
 import com.cloudbees.plugins.credentials.CredentialsProvider
 import com.cloudbees.plugins.credentials.domains.DomainRequirement
+ */
 
 /**
  * Downloads a file from the given url and stores it in the local workspace
