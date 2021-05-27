@@ -102,6 +102,10 @@ def keptnInit(Map args) {
     String stage = args.containsKey("stage") ? args.stage : ""
     String service = args.containsKey("service") ? args.service : ""
     String monitoring = args.containsKey("monitoring") ? args.monitoring : ""
+    
+    echo "keptn project ${project}"
+    echo "keptn endpoint ${keptn_endpoint}"
+    echo "keptn api token ${keptn_api_token}"
 
     if ((project == "") || (stage == "") || (service == "") ||
         (keptn_endpoint == null) || (keptn_bridge == null) || (keptn_api_token == null)) {
@@ -1119,6 +1123,7 @@ def testMe() {
     def keptnServiceName = "test-jenkins-service"
     def keptnStageName = "qualitygates"
     def KEPTN_API_TOKEN = credentials('keptn-api-token')
+    echo "keptn api token ${KEPTN_API_TOKEN}"
     def keptnBridgeTest = "http://keptn.35.223.58.148.nip.io/bridge"
     def keptnEndpointTest = "http://keptn.35.223.58.148.nip.io/api"
     keptnInit project: keptnProjectName, service: keptnServiceName, stage: keptnStageName, keptn_endpoint: keptnEndpointTest, keptn_bridge: keptnBridgeTest
