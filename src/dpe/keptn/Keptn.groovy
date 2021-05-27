@@ -1118,6 +1118,7 @@ def testMe() {
     def keptnProjectName = "test-jenkins-project"
     def keptnServiceName = "test-jenkins-service"
     def keptnStageName = "qualitygates"
+    def KEPTN_API_TOKEN_TEST = credentials('keptn-api-token')
     keptnInit project: keptnProjectName, service: keptnServiceName, stage: keptnStageName
     steps.echo "====== self testing keptnInit steps complete  ======="
 }
