@@ -1124,7 +1124,7 @@ def testMe() {
     def keptnServiceName = "test-jenkins-service"
     def keptnStageName = "qualitygates"
     def keptnApiTokenTest = credentials('keptn-api-token')
-    echo "keptn api token ${KEPTN_API_TOKEN}"
+    echo "keptn api token ${keptnApiTokenTest}"
     def keptnBridgeTest = "http://keptn.35.223.58.148.nip.io/bridge"
     def keptnEndpointTest = "http://keptn.35.223.58.148.nip.io/api"
     keptnInit project: keptnProjectName, service: keptnServiceName, stage: keptnStageName, keptn_endpoint: keptnEndpointTest, keptn_api_token: keptnApiTokenTest, keptn_bridge: keptnBridgeTest
